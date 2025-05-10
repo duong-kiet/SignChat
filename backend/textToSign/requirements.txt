@@ -1,0 +1,8 @@
+fastapi[standard]
+pydantic
+sqlmodel
+uvicorn[standard]
+python-multipart
+sqlalchemy
+jinja2
+# python-socketio
