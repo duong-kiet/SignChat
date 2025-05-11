@@ -26,13 +26,13 @@ const ZoomSignIn = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center pt-16 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 flex flex-col items-center pt-16 px-4">
       {/* Logo */}
       <div className="mb-8 text-center">
         <div className="flex items-center justify-center">
-          <h1 className="text-[#2D8CFF] text-3xl font-bold">SignMeet</h1>
+          <h1 className="text-white text-3xl font-bold">SignMeet</h1>
           <svg
-            className="w-4 h-4 ml-1 text-gray-500"
+            className="w-4 h-4 ml-1 text-white/50"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -45,13 +45,13 @@ const ZoomSignIn = () => {
             />
           </svg>
         </div>
-        <h2 className="text-[#232333] text-2xl font-bold mt-2">Workplace</h2>
-        <p className="text-gray-500 text-sm mt-1">us05web.sigmeet.us</p>
+        <h2 className="text-white text-2xl font-bold mt-2">Workplace</h2>
+        <p className="text-white/60 text-sm mt-1">us05web.sigmeet.us</p>
       </div>
 
       {/* Sign in form */}
       <div className="w-full max-w-md">
-        <form className="space-y-4">
+        <form className="space-y-4 bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-2xl border border-white/20">
           <EmailInput email={email} setEmail={setEmail} />
           <PasswordInput password={password} setPassword={setPassword} />
           <SignInButton isLoading={isLoading} onSignIn={handleSignInClick} />
@@ -61,9 +61,9 @@ const ZoomSignIn = () => {
             <input
               type="checkbox"
               id="keep-signed"
-              className="w-4 h-4 border-gray-300 rounded"
+              className="w-4 h-4 border-white/20 rounded text-pink-500 focus:ring-pink-500/30"
             />
-            <label htmlFor="keep-signed" className="ml-2 text-gray-600">
+            <label htmlFor="keep-signed" className="ml-2 text-white/80">
               Remember me
             </label>
           </div>
@@ -71,12 +71,12 @@ const ZoomSignIn = () => {
 
         {/* Social sign in */}
         <div className="mt-8">
-          <div className="relative">
+          <div className="relative mb-6">
             <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-gray-200"></div>
+              <div className="w-full border-t border-white/20"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-4 bg-white text-gray-500">
+              <span className="px-4 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 text-white/80">
                 or sign in with
               </span>
             </div>
@@ -87,9 +87,9 @@ const ZoomSignIn = () => {
       </div>
 
       {/* Bottom navigation */}
-      <div className=" w-full bottom-0 left-0 right-0 p-4 flex justify-between bg-white">
+      <div className="w-full bottom-0 left-0 right-0 p-4 flex justify-between bg-transparent">
         <button
-          className="text-gray-600 hover:text-gray-900 flex items-center"
+          className="text-white/80 hover:text-white flex items-center"
           onClick={handleNavigation}
           disabled={isLoading}
         >
@@ -108,7 +108,9 @@ const ZoomSignIn = () => {
           </svg>
           <Link href={"/"}>{isLoading ? "Loading..." : "Back"}</Link>
         </button>
-        <button className="text-blue-500 hover:text-blue-600">Sign Up</button>
+        <Link href="/signup">
+          <button className="text-white hover:text-white/80">Sign Up</button>
+        </Link>
       </div>
     </div>
   );

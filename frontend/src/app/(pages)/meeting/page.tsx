@@ -29,12 +29,12 @@ const JoinMeeting = () => {
     );
   };
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center justify-center px-8 py-6">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 flex flex-col items-center justify-center px-8 py-6">
       {/* Title */}
-      <h1 className="text-[#232333] text-2xl font-medium mb-8">Join meeting</h1>
+      <h1 className="text-white text-2xl font-medium mb-8">Join meeting</h1>
 
       {/* Form */}
-      <div className="space-y-4 max-w-xl">
+      <div className="space-y-4 max-w-xl bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-2xl border border-white/20">
         {/* Meeting ID Input */}
         <div className="relative">
           <input
@@ -43,9 +43,9 @@ const JoinMeeting = () => {
             placeholder="Meeting ID or personal link name"
             value={formData.meetingId}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-[#0b5cff] rounded-lg focus:outline-none text-gray-600"
+            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:border-pink-500 focus:ring-1 focus:ring-pink-500/30 outline-none text-white placeholder-white/50"
           />
-          <button className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
+          <button className="absolute right-3 top-1/2 -translate-y-1/2 text-white/50 hover:text-white/80">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -70,7 +70,7 @@ const JoinMeeting = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#0b5cff] focus:outline-none text-gray-600"
+            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:border-pink-500 focus:ring-1 focus:ring-pink-500/30 outline-none text-white placeholder-white/50"
           />
         </div>
 
@@ -84,7 +84,7 @@ const JoinMeeting = () => {
                 name="rememberName"
                 checked={formData.rememberName}
                 onChange={handleChange}
-                className="w-4 h-4 border border-gray-300 rounded appearance-none checked:bg-[#0b5cff] checked:border-[#0b5cff] cursor-pointer"
+                className="w-4 h-4 border border-white/20 rounded appearance-none checked:bg-gradient-to-r from-pink-500 to-purple-500 checked:border-transparent cursor-pointer"
               />
               {formData.rememberName && (
                 <svg
@@ -99,7 +99,7 @@ const JoinMeeting = () => {
                 </svg>
               )}
             </div>
-            <span className="text-gray-600 group-hover:text-gray-800">
+            <span className="text-white/80 group-hover:text-white">
               Remember me
             </span>
           </label>
@@ -112,7 +112,7 @@ const JoinMeeting = () => {
                 name="noAudio"
                 checked={formData.noAudio}
                 onChange={handleChange}
-                className="w-4 h-4 border border-gray-300 rounded appearance-none checked:bg-[#0b5cff] checked:border-[#0b5cff] cursor-pointer"
+                className="w-4 h-4 border border-white/20 rounded appearance-none checked:bg-gradient-to-r from-pink-500 to-purple-500 checked:border-transparent cursor-pointer"
               />
               {formData.noAudio && (
                 <svg
@@ -127,9 +127,7 @@ const JoinMeeting = () => {
                 </svg>
               )}
             </div>
-            <span className="text-gray-600 group-hover:text-gray-800">
-              Audio
-            </span>
+            <span className="text-white/80 group-hover:text-white">Audio</span>
           </label>
 
           {/* Turn off video */}
@@ -140,7 +138,7 @@ const JoinMeeting = () => {
                 name="noVideo"
                 checked={formData.noVideo}
                 onChange={handleChange}
-                className="w-4 h-4 border border-gray-300 rounded appearance-none checked:bg-[#0b5cff] checked:border-[#0b5cff] cursor-pointer"
+                className="w-4 h-4 border border-white/20 rounded appearance-none checked:bg-gradient-to-r from-pink-500 to-purple-500 checked:border-transparent cursor-pointer"
               />
               {formData.noVideo && (
                 <svg
@@ -155,20 +153,18 @@ const JoinMeeting = () => {
                 </svg>
               )}
             </div>
-            <span className="text-gray-600 group-hover:text-gray-800">
-              Camera
-            </span>
+            <span className="text-white/80 group-hover:text-white">Camera</span>
           </label>
         </div>
 
         {/* Terms Text */}
-        <p className="text-sm text-gray-600">
+        <p className="text-sm text-white/80">
           By clicking "Join", I accept with{" "}
-          <a href="#" className="text-[#0b5cff] hover:underline">
+          <a href="#" className="text-white hover:underline">
             Policy Statement
           </a>{" "}
           and{" "}
-          <a href="#" className="text-[#0b5cff] hover:underline">
+          <a href="#" className="text-white hover:underline">
             Private Security
           </a>
           .
@@ -177,15 +173,17 @@ const JoinMeeting = () => {
         {/* Action Buttons */}
         <div className="flex justify-end gap-3 pt-4">
           <button
-            className="px-6 py-2 border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-50"
+            className="px-6 py-2 border border-white/20 rounded-xl text-white/80 hover:bg-white/10 transition-colors"
             onClick={() => router.back()}
           >
             Cancel
           </button>
           <button
-            className={`px-6 py-2  rounded-lg ${
-              isTyped ? "bg-blue-700 text-white" : " bg-[#f3f3f4] text-gray-400"
-            }`}
+            className={`px-6 py-2 rounded-xl ${
+              isTyped
+                ? "bg-gradient-to-r from-pink-500 to-purple-500 text-white hover:from-pink-600 hover:to-purple-600"
+                : "bg-white/10 text-white/50"
+            } transition-all duration-300`}
             onClick={handleSubmit}
             disabled={!formData.meetingId}
           >

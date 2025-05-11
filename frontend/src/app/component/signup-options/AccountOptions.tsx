@@ -1,6 +1,7 @@
 import { FaApple } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
+
 const AccountOptions = () => {
   return (
     <>
@@ -9,7 +10,7 @@ const AccountOptions = () => {
         {["SSO", "Apple", "Google", "Facebook"].map((provider) => (
           <button
             key={provider}
-            className="flex flex-col items-center justify-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50"
+            className="group flex flex-col items-center justify-center p-4 border border-white/20 rounded-lg bg-white/10 hover:bg-white transition-all duration-300"
           >
             <div className="w-6 h-6 mb-2">
               {provider === "SSO" && (
@@ -19,6 +20,7 @@ const AccountOptions = () => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
+                  className="text-white group-hover:text-black"
                 >
                   <path
                     strokeLinecap="round"
@@ -28,17 +30,22 @@ const AccountOptions = () => {
                 </svg>
               )}
               {/* Add other provider icons here */}
-              {provider === "Apple" && <FaApple className="w-6 h-6" />}
+              {provider === "Apple" && (
+                <FaApple className="w-6 h-6 text-white group-hover:text-black" />
+              )}
               {provider === "Google" && <FcGoogle className="w-6 h-6" />}
               {provider === "Facebook" && (
-                <FaFacebook className="w-6 h-6 text-blue-700" />
+                <FaFacebook className="w-6 h-6 text-[#1877F2]" />
               )}
             </div>
-            <span className="text-xs text-gray-600">{provider}</span>
+            <span className="text-xs text-white group-hover:text-black">
+              {provider}
+            </span>
           </button>
         ))}
       </div>
     </>
   );
 };
+
 export default AccountOptions;

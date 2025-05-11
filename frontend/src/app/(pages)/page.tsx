@@ -153,17 +153,17 @@ const SignMeetWorkplace: React.FC = () => {
       case "playing":
         return {
           text: "Đang phát âm thanh...",
-          className: "bg-blue-500",
+          className: "bg-gradient-to-r from-pink-500 to-purple-500",
         };
       case "listening":
         return {
           text: "Đang nghe...",
-          className: "bg-red-500",
+          className: "bg-gradient-to-r from-pink-500 to-purple-500",
         };
       default:
         return {
           text: "Trợ lý",
-          className: "bg-green-600",
+          className: "bg-gradient-to-r from-pink-500 to-purple-500",
         };
     }
   };
@@ -171,7 +171,7 @@ const SignMeetWorkplace: React.FC = () => {
   const buttonConfig = getButtonConfig();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-500 to-blue-700 flex flex-col items-center justify-center p-4 bg-pattern">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 flex flex-col items-center justify-center p-4 bg-pattern">
       {/* Logo and Title Section */}
       <div className="mb-20 text-center animate-fade-down">
         <div className="flex items-center justify-center mb-6">
@@ -217,12 +217,12 @@ const SignMeetWorkplace: React.FC = () => {
       </div>
 
       {/* Main Container */}
-      <div className="bg-white/80 backdrop-blur-lg rounded-2xl p-8 w-full max-w-md shadow-2xl animate-fade-up border border-white/20">
+      <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 w-full max-w-md shadow-2xl animate-fade-up border border-white/20">
         {/* Join Meeting Button */}
         <Link href={"/meeting"}>
           <button
-            className="w-full bg-blue-600 text-white py-4 px-6 rounded-lg mb-5 
-                         hover:bg-blue-700 transition-all duration-300 font-semibold flex items-center justify-center
+            className="w-full bg-gradient-to-r from-pink-500 to-purple-500 text-white py-4 px-6 rounded-xl mb-5 
+                         hover:from-pink-600 hover:to-purple-600 transition-all duration-300 font-semibold flex items-center justify-center
                          transform hover:scale-102 hover:shadow-lg active:scale-98"
           >
             <svg
@@ -246,8 +246,8 @@ const SignMeetWorkplace: React.FC = () => {
         {/* Sign Up Button */}
         <Link href={"/signup"}>
           <button
-            className="w-full bg-white text-blue-600 py-4 px-6 rounded-lg mb-4
-                         border-2 border-blue-600/20 hover:border-blue-600 hover:bg-blue-50 
+            className="w-full bg-white/10 text-white py-4 px-6 rounded-xl mb-4
+                         border border-white/20 hover:bg-white/20 
                          transition-all duration-300 font-semibold transform hover:scale-102 hover:shadow-md"
           >
             Sign up
@@ -257,8 +257,8 @@ const SignMeetWorkplace: React.FC = () => {
         {/* Sign In Button */}
         <Link href={"/signin"} prefetch>
           <button
-            className="w-full bg-gray-100/80 text-gray-700 py-4 px-6 rounded-lg
-                         hover:bg-gray-200 transition-all duration-300 font-medium 
+            className="w-full bg-white/10 text-white py-4 px-6 rounded-xl
+                         hover:bg-white/20 transition-all duration-300 font-medium 
                          transform hover:scale-102 hover:shadow-md"
           >
             Sign in
