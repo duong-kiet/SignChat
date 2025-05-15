@@ -5,7 +5,8 @@
   
 ## Giao diện
 ### Trang chủ
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/cd06ec52-c1e1-4be1-9d27-f647f3836c1c)
+
 
 
 ### Trang Workplace
