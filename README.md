@@ -38,3 +38,14 @@ Redis
 Pytorch
 ...
 
+## Run
+```
+cd /frontend
+npm install
+npm run dev
+
+cd /backend
+add API KEY to env file
+node speechToText-v2/js/server.js
+```
+
