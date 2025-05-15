@@ -23,6 +23,8 @@
 Dùng firebase database realtime để lưu trữ và chuyển tin nhắn
 ### Speech-to-Text đa ngôn ngữ:
 ![{08C37C6B-D71F-4644-B961-158EFC1806C7}](https://github.com/user-attachments/assets/b6158b1c-de3a-4114-a624-88d3e11fec9c)
+### Điều khiển bằng giọng nói
+TTích hợp WebNavigation vào SignMeet nhằm bổ sung khả năng điều hướng web bằng giọng nói và cử chỉ, tận dụng Whisper để nâng cao hiệu suất nhận diện giọng nói. Phần này tập trung chi tiết vào phương án tích hợp, bao gồm kiến trúc hệ thống và các bước triển khai
 
 ## Công nghệ:
 Firebase
