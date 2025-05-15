@@ -5,7 +5,8 @@
   
 ## Giao diện
 ### Trang chủ
-![{BF9E1E61-B74D-4AA6-9D7C-6903E45A35BA}]([https://github.com/user-attachments/assets/8c1255cb-3e48-4f02-9076-266fb28c773c](https://www.overleaf.com/project/68217cac4acb9b5a5265deeb/blob/41d3a0d9b6af7dffd762f2451e8a33964eb4c394?fallback=6824ce2434aba9360f5b166c))
+![Uploading image.png…]()
+
 
 ### Trang Workplace
 ![{F0822BE1-2CAB-4547-A692-CF46E63DF2A3}](https://github.com/user-attachments/assets/1a57e63e-8fc1-453a-bca3-1573630a7e13)
